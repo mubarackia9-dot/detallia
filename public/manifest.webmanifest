@@ -1,0 +1,15 @@
+{
+  "name": "Detallia",
+  "short_name": "Detallia",
+  "description": "Pedidos personalizados, costos, materiales y clientes para tiendas de regalos.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbf7f4",
+  "theme_color": "#6b2c7a",
+  "lang": "es-CO",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
