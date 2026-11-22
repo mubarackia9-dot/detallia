@@ -60,6 +60,7 @@ export default function Auth({ toast }) {
         {msg && <p className={`form-msg ${msg.tone}`}>{msg.text}</p>}
         <button className="btn btn-primary btn-block" disabled={busy}>{busy ? 'Un momento…' : modo === 'entrar' ? 'Ingresar' : 'Crear mi cuenta'}</button>
       </form>
+      <p className="auth-foot"><a href="#/encuesta">Responder la encuesta de opinión</a></p>
       <p className="auth-foot">MVP académico · Politécnico Grancolombiano · 2026</p>
       {toast && <div className={`toast toast-${toast.tone}`}>{toast.msg}</div>}
     </div>

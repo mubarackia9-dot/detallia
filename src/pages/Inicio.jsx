@@ -56,6 +56,8 @@ export default function Inicio({ negocio, notify }) {
         <button onClick={() => go('materiales/compras')}>Lista de compras{bajos ? <Badge tone="danger">{bajos}</Badge> : null}</button>
       </div>
 
+      <a className="card feedback" href="#/encuesta"><span>💬</span><span><b>¿Ya probaste Detallia?</b><br /><span className="muted small">Cuéntanos qué te parece en 3 minutos</span></span><span className="chev">›</span></a>
+
       {atrasados.length > 0 && (
         <section className="card alert">
           <strong>{atrasados.length} pedido(s) confirmado(s) con fecha vencida.</strong> Márcalos como entregados o cámbiales la fecha.

@@ -10,6 +10,7 @@ import Materiales from './pages/Materiales'
 import Clientes from './pages/Clientes'
 import Caja from './pages/Caja'
 import Ajustes from './pages/Ajustes'
+import Encuesta from './pages/Encuesta'
 import { Loading } from './components/ui'
 
 const TABS = [
@@ -55,6 +56,7 @@ export default function App() {
   }, [])
 
   if (session === undefined) return <div className="center-screen"><Loading /></div>
+  if (route[0] === 'encuesta') return <Encuesta session={session} />
   if (!session) return <Auth notify={notify} toast={toast} />
   if (!negocio) return <div className="center-screen"><Loading /></div>
 
