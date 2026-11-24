@@ -1,1 +1,6 @@
-{ "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }] }
+{
+  "rewrites": [
+    { "source": "/pitch", "destination": "/pitch/index.html" },
+    { "source": "/((?!pitch/).*)", "destination": "/index.html" }
+  ]
+}
