@@ -14,17 +14,17 @@ nav{display:flex;align-items:center;justify-content:center;gap:16px;padding:14px
 nav button{width:48px;height:48px;border-radius:50%;border:none;background:#3a2c40;color:#fff;font-size:22px;cursor:pointer}
 nav button:disabled{opacity:.3}nav span{min-width:70px;text-align:center;font-variant-numeric:tabular-nums}
 </style></head><body><div class="wrap">
-<header><img src="/icon.svg" alt=""><b>Detallia · Pitch Deck</b><span class="sp"></span><a href="Detallia_Pitch_Deck.pdf" download>Descargar PDF</a><a href="/" style="background:#3a2c40">Abrir la app</a></header>
+<header><img src="/icon.svg" alt=""><b>Detallia · Pitch Deck</b><span class="sp"></span><a href="/pitch/Detallia_Pitch_Deck.pdf" download>Descargar PDF</a><a href="/" style="background:#3a2c40">Abrir la app</a></header>
 <div class="stage"><img id="s" alt="Diapositiva 1 de 10"></div>
 <nav><button id="p" aria-label="Anterior">‹</button><span id="n"></span><button id="x" aria-label="Siguiente">›</button></nav>
 </div>
 <script>
 let i=1;const N=10,img=document.getElementById('s'),n=document.getElementById('n'),p=document.getElementById('p'),x=document.getElementById('x');
 const pad=k=>String(k).padStart(2,'0');
-function show(){img.src='slide'+pad(i)+'.jpg';img.alt='Diapositiva '+i+' de '+N;n.textContent=i+' / '+N;p.disabled=i==1;x.disabled=i==N}
+function show(){img.src='/pitch/slide'+pad(i)+'.jpg';img.alt='Diapositiva '+i+' de '+N;n.textContent=i+' / '+N;p.disabled=i==1;x.disabled=i==N}
 p.onclick=()=>{if(i>1){i--;show()}};x.onclick=()=>{if(i<N){i++;show()}};
 addEventListener('keydown',e=>{if(e.key=='ArrowRight'||e.key==' ')x.click();if(e.key=='ArrowLeft')p.click()});
 let tx=0;addEventListener('touchstart',e=>tx=e.touches[0].clientX);addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-tx;if(d<-40)x.click();if(d>40)p.click()});
-for(let k=1;k<=N;k++){const im=new Image();im.src='slide'+pad(k)+'.jpg'}
+for(let k=1;k<=N;k++){const im=new Image();im.src='/pitch/slide'+pad(k)+'.jpg'}
 show();
 </script></body></html>
